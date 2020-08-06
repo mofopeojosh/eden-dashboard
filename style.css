@@ -3,7 +3,7 @@ body{
     font-weight: lighter;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 0.045em;
+    letter-spacing: 0.05em;
     color: #383838;
     margin: 0;
 }
@@ -34,15 +34,16 @@ button:active, button:focus{
 .app-container{
     height: 100vh;
     height: -webkit-fill-available;
-    width: -webkit-fill-available;
+    display: flex;
+    flex-flow: column nowrap;
     overflow: hidden;
     background-color: #F9FFFB;
     position: relative;
 }
 .app-body{
-    height: calc(100% - 90px);
+    height: calc(100% - 85px);
     overflow: scroll;
-    padding: 16px 5% 90px;
+    padding: 16px 5% 85px;
 }
 
 @media (min-width: 800px) {
@@ -61,9 +62,7 @@ button:active, button:focus{
     }
 
     .app-body {
-        height: calc(100% - 100px);
         padding-top: 24px;
-        padding-bottom: 100px;
     }
 }
 /****** PROFILE SECTION ******/
