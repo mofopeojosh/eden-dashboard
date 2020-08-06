@@ -40,7 +40,7 @@ function handleMealModal(action) {
         height: offsetHeight + 'px',
         width: offsetWidth + 'px',
         marginTop: offsetTop + 'px',
-        opacity: 0.5,
+        opacity: 0,
     };
     var mealModalContentEnd = {
         height: '100%',
