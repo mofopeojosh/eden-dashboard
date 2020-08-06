@@ -136,7 +136,7 @@ function handleDishModal(action) {
     var dishModalImageStart = {
         height: offsetHeight + 'px',
         width: offsetWidth + 'px',
-        marginTop: (offsetTop) + 'px',
+        marginTop: offsetTop + 'px',
         marginLeft: '30px',
         borderRadius: '15px',
     };
