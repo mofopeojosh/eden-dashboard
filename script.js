@@ -5,10 +5,10 @@ var timingOptions = {
 };
 
 var modalStart = {
-    background: 'transparent',
+    backgroundColor: 'transparent',
 };
 var modalEnd = {
-    background: 'rgba(0,0,0,0.9)',
+    backgroundColor: 'rgba(0,0,0,0.9)',
 };
 
 // Add Event listeners

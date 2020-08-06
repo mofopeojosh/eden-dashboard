@@ -3,7 +3,7 @@ body{
     font-weight: lighter;
     font-size: 14px;
     line-height: 20px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.045em;
     color: #383838;
     margin: 0;
 }
@@ -26,10 +26,12 @@ button:active, button:focus{
     outline: none;
 }
 
-.app-container{
-    display: flex;
+
+/****** APP LAYOUT ******/
+.app-header{
+   display: none;
 }
-.app-body{
+.app-container{
     margin: auto;
     height: 100vh;
     overflow: hidden;
@@ -37,13 +39,34 @@ button:active, button:focus{
     background-color: #F9FFFB;
     position: relative;
 }
-.app-body-inner{
+.app-body{
     clear: both;
-    height: 100%;
+    height: calc(100% - 90px);
     overflow: scroll;
-    padding: 16px 5%;
+    padding: 16px 5% 90px;
 }
 
+@media (min-width: 800px) {
+    .app-header {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F9F9F9;
+    }
+
+    .app-container {
+        margin: auto;
+        height: calc(100vh - 70px);
+    }
+
+    .app-body {
+        height: calc(100% - 90px);
+        padding-top: 24px;
+        padding-bottom: 90px;
+    }
+}
+/****** PROFILE SECTION ******/
 .section-profile{
     display: flex;
     align-items: center;
@@ -60,8 +83,7 @@ button:active, button:focus{
 }
 
 
-.section-schedule{
-}
+/****** SCHEDULE SECTION ******/
 .schedule-header{
     display: flex;
     margin: 24px 0;
@@ -124,6 +146,7 @@ button:active, button:focus{
 }
 
 
+/****** GETTING STARTED SECTION ******/
 .section-getting-started{
     margin: 30px 0;
     padding: 20px;
@@ -168,38 +191,41 @@ button:active, button:focus{
 .section-getting-started .getting-started-purple .getting-started-action{
     color: #8A5CFF;
 }
+.section-getting-started .getting-started-action{
+    text-decoration: none;
+}
 .section-getting-started .getting-started-action .getting-started-action-text{
     text-decoration: underline;
 }
 
 
-.section-reminder{
-    margin-bottom: 100px;
-}
-.reminder-row{
+/****** REMINDER SECTION ******/
+.section-reminder .reminder-row{
     display: flex;
     align-items: center;
     margin: 16px 0;
 }
-.reminder-heading{
+.section-reminder .reminder-heading{
     font-weight: 300;
     color: #00C267;
 }
-.reminder-time {
+.section-reminder .reminder-time {
     flex: 1;
 }
-.reminder-card{
+.section-reminder .reminder-card{
     flex: 3;
     padding: 13px 16px;
     border-radius: 6px;
 }
-.reminder-card-a{
+.section-reminder .reminder-card-a{
     background-color: #E4F5Fd;
 }
-.reminder-card-b{
+.section-reminder .reminder-card-b{
     background-color: #F1F0FD;
 }
 
+
+/****** APP FOOTER ******/
 .app-footer-nav{
     position: absolute;
     left: 0;
@@ -220,6 +246,8 @@ button:active, button:focus{
     text-decoration: none;
 }
 
+
+/****** MODALS ******/
 .modal{
     top: 0;
     left: 0;
