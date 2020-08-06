@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Eden Dashboard</title>
+
+	<link href="//db.onlinewebfonts.com/c/bb018e64d01355748d8ddc53553850b9?family=Cerebri+Sans" rel="stylesheet"
+		  type="text/css"/>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+
+<main class="app-body">
+	<div class="app-body-inner">
+		<section class="section-profile">
+			<img src="assets/profile.jpg" alt="avi" class="profile-img">
+			<h4 class="profile-heading">Good morning Prosper!</h4>
+		</section>
+		<section class="section-schedule">
+			<header class="schedule-header">
+				<h2 class="schedule-header-title">Schedule</h2>
+				<div>
+					<button class="schedule-header-btn">Reconfigure Services</button>
+				</div>
+			</header>
+			<div class="schedule-card schedule-card-green">
+				<div class="schedule-card-info">
+					Your account is inactive.
+					<strong>15% off</strong> offer until June 23.
+				</div>
+				<div class="schedule-card-action">
+					<div class="schedule-action-content">
+						<del class="schedule-amount-old">N75,000</del>
+						Pay N62,800
+					</div>
+				</div>
+			</div>
+			<a href="#" id="mealModalOpener" class="schedule-card schedule-card-orange">
+				<div class="schedule-card-info">
+					View your meals for the week
+				</div>
+				<div class="schedule-card-action">
+					<div class="schedule-action-content">
+						<span>Check 'em</span>
+					</div>
+				</div>
+			</a>
+		</section>
+		<section class="section-getting-started">
+			<h3 class="getting-started-title">Getting Started</h3>
+			<p>Let's answer any questions you have left:</p>
+			<div class="getting-started-steps">
+				<article class="getting-started-step getting-started-purple">
+					<div class="icon-badge">
+						<img src="assets/call-icon.png" alt="call"/>
+					</div>
+					<p>Set up a call with a gardner</p>
+					<a href="#" class="getting-started-action">
+						<span class="getting-started-action-text">Do it</span>
+					</a>
+				</article>
+				<article class="getting-started-step getting-started-orange">
+					<div class="icon-badge">
+						<img src="assets/play-icon.png" alt="play"/>
+					</div>
+					<p>Lose yourself to this video</p>
+					<a href="#" class="getting-started-action">
+						<span class="getting-started-action-text">Play it</span>
+					</a>
+				</article>
+			</div>
+		</section>
+		<section class="section-reminder">
+			<h3 class="reminder-heading">Tomorrow</h3>
+			<div class="">
+				<div class="reminder-row">
+					<span class="reminder-time">9 - 10am</span>
+					<div class="reminder-card reminder-card-a">
+						Your cleaner is coming in to give the apartment the looks.
+					</div>
+				</div>
+				<div class="reminder-row">
+					<span class="reminder-time">3 - 5am</span>
+					<div class="reminder-card reminder-card-b">
+						Winter? We're getting your AC fixed.
+					</div>
+				</div>
+			</div>
+			<h3 class="reminder-heading">Friday, July 27</h3>
+			<div class="">
+				<div class="reminder-row">
+					<span class="reminder-time">9 - 10am</span>
+					<div class="reminder-card reminder-card-a">
+						Your cleaner came in to give the apartment the looks.
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="app-footer-nav">
+			<div class="footer-menu">
+				<a href="#">
+					<img src="assets/calendar-active.png" alt="schedule"/>
+					<p>Schedule</p>
+				</a>
+				<a href="#">
+					<img src="assets/clock.png" alt="schedule"/>
+					<p>History</p>
+				</a>
+				<a href="#">
+					<img src="assets/bell.png" alt="schedule"/>
+					<p>Notifications</p>
+				</a>
+				<a href="#">
+					<img src="assets/chat.png" alt="schedule"/>
+					<p>Chat</p>
+				</a>
+			</div>
+		</footer>
+	</div>
+
+	<div class="modal" id="mealModal">
+		<div class="modal-content" id="mealModalContent">
+			<header class="modal-header">
+				<div class="modal-header-title">
+					<h3>Today's Meals</h3>
+				</div>
+				<div class="modal-header-action">
+					<a href="#" class="modal-close" id="mealModalCloser">
+						<img src="assets/close.png" alt="*">
+					</a>
+				</div>
+			</header>
+			<div class="modal-body">
+				<div class="meal-item">
+					<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					<div class="meal-info">
+						<p>Akara &amp; Pap</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+				<div class="meal-item">
+					<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					<div class="meal-info">
+						<p>Jollof Rice</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+				<div class="meal-item">
+					<a href="#" id="dishModalOpener">
+						<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					</a>
+					<div class="meal-info">
+						<p>Gastonton</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+				<div class="meal-item">
+					<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					<div class="meal-info">
+						<p>Port Domenic</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+				<div class="meal-item">
+					<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					<div class="meal-info">
+						<p>Carleeville</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+				<div class="meal-item">
+					<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					<div class="meal-info">
+						<p>Akara &amp; Pap</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+				<div class="meal-item">
+					<img src="assets/akara.png" alt="akara" class="meal-img"/>
+					<div class="meal-info">
+						<p>South Chesleyton</p>
+						<span>Carbohydrate</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal" id="dishModal">
+		<div class="modal-content" id="dishModalContent">
+			<div class="dish-wrapper" >
+				<img src="assets/dish.png" alt="Dish" id="">
+			</div>
+		</div>
+	</div>
+</main>
+
+<script type="text/javascript">
+let mealModalOpener = document.querySelector('#mealModalOpener');
+mealModalOpener.onclick = () => handleMealModal('open');
+
+let mealModalCloser = document.querySelector('#mealModalCloser');
+mealModalCloser.onclick = () => handleMealModal('close');
+
+let dishModalOpener = document.querySelector('#dishModalOpener');
+dishModalOpener.onclick = () => handleDishModal('open');
+
+let dishModal = document.querySelector('#dishModal');
+dishModal.onclick = (e) => {
+    if(e.target !== document.querySelector('#dishModal img')){
+        handleDishModal('close');
+    }
+};
+
+let timingOptions = {
+    easing: 'ease-in-out',
+    duration: 700,
+};
+
+let modalStart = {
+    background: 'transparent',
+};
+let modalEnd = {
+    background: 'rgba(0,0,0,0.9)',
+};
+
+function handleMealModal(action) {
+    let btn = document.querySelector('#mealModalOpener');
+    let offsetTop = btn.offsetTop;
+    let offsetHeight = btn.offsetHeight;
+    let offsetWidth = btn.offsetWidth;
+    let mealModal = document.querySelector('#mealModal');
+
+    let mealModalContent = document.querySelector('#mealModalContent');
+    let mealModalContentStart = {
+        height: offsetHeight + 'px',
+        width: offsetWidth + 'px',
+        marginTop: offsetTop + 'px',
+        opacity: 0,
+    };
+    let mealModalContentEnd = {
+        height: '100%',
+        width: '100%',
+        marginTop: 130 + 'px',
+        opacity: 1,
+    };
+
+    let mealItems = document.querySelectorAll('.meal-item');
+    let mealItemsEnd = {
+        marginTop: '0px',
+        marginLeft: '0px',
+    };
+
+    if (action === 'open') {
+        openMealModal();
+    }
+    if (action === 'close') {
+        closeMealModal();
+    }
+
+    function openMealModal() {
+        mealModal.style.display = 'block';
+
+        mealModal.animate([
+            modalStart,
+            modalEnd
+        ], timingOptions);
+
+        mealModalContent.animate([
+            mealModalContentStart,
+            mealModalContentEnd
+        ], timingOptions);
+
+        mealItems.forEach(mealItem => {
+            let firstMealItemOffset = mealItems[0].offsetTop;
+            let offsetTop = mealItem.offsetTop;
+            let mealItemsStart = {
+                marginTop: '-' + Math.abs(offsetTop - firstMealItemOffset) + 'px',
+                marginLeft: '-' + 20 + 'px',
+            };
+
+            mealItem.animate([
+                mealItemsStart,
+                mealItemsEnd
+            ], timingOptions);
+        });
+    }
+
+    function closeMealModal() {
+        let mealModal = document.querySelector('#mealModal');
+
+        mealModal.animate([
+            modalEnd,
+            modalStart
+        ], timingOptions);
+
+        mealModalContent.animate([
+            mealModalContentEnd,
+            mealModalContentStart,
+        ], timingOptions);
+
+        let offsetDiff = 0;
+        mealItems.forEach(mealItem => {
+            let firstMealItemOffset = mealItems[0].offsetTop;
+
+            let mealItemsStart = {
+                marginTop: '-' + Math.abs((mealItem.offsetTop - firstMealItemOffset) - offsetDiff) + 'px',
+                marginLeft: '-' + 20 + 'px',
+            };
+            offsetDiff = mealItem.offsetTop - firstMealItemOffset;
+
+            mealItem.animate([
+                mealItemsEnd,
+                mealItemsStart
+            ], timingOptions);
+        });
+
+        setTimeout(() => {
+            mealModal.style.display = 'none';
+        }, 700);
+    }
+}
+
+function handleDishModal(action) {
+
+    let dishButton = document.querySelector('#dishModalOpener');
+    let offsetTop = dishButton.getBoundingClientRect().top;
+    let offsetHeight = dishButton.offsetHeight;
+    let offsetWidth = dishButton.offsetWidth;
+
+    let dishModalImage = document.querySelector('#dishModalContent img');
+    let dishModalImageStart = {
+        opacity: 0.2,
+        height: offsetHeight + 'px',
+        width: offsetWidth + 'px',
+        marginTop: (offsetTop - 100) + 'px',
+        marginLeft: '30px',
+        borderRadius: '20px',
+    };
+    let dishModalImageEnd = {
+        opacity: 1,
+        height: '100%',
+        width: '100%',
+        marginTop: 0 + 'px',
+        marginLeft: '0px',
+        borderRadius: '0px'
+    };
+
+    if (action === 'open') {
+        openDishModal();
+    }
+    if (action === 'close') {
+        closeDishModal();
+    }
+
+    function openDishModal() {
+        dishModal.style.display = 'block';
+
+        dishModal.animate([
+            modalStart,
+            modalEnd
+        ], timingOptions);
+
+        dishModalImage.animate([
+            dishModalImageStart,
+            dishModalImageEnd
+        ], timingOptions);
+    }
+
+    function closeDishModal() {
+
+        dishModal.animate([
+            modalEnd,
+            modalStart,
+        ], timingOptions);
+
+        dishModalImage.animate([
+            dishModalImageEnd,
+            dishModalImageStart,
+        ], timingOptions);
+
+        setTimeout(() => {
+            dishModal.style.display = 'none';
+        }, 700);
+    }
+}
+
+</script>
+</body>
+</html>

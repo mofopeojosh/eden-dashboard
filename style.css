@@ -1,0 +1,300 @@
+body{
+    font-family: Cerebi sans, sans-serif, Arial;
+    font-weight: lighter;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    color: #383838;
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    font-family: "PT Serif";
+    color: #121212;
+}
+h2{
+    font-size: 28px;
+    line-height: 37px;
+}
+h3{
+    font-size: 17px;
+}
+p{
+    margin: 0;
+}
+button:active, button:focus{
+    outline: none;
+}
+
+.app-container{
+    display: flex;
+}
+.app-body{
+    margin: auto;
+    height: 100vh;
+    overflow: hidden;
+    max-width: 400px;
+    background-color: #F9FFFB;
+    position: relative;
+}
+.app-body-inner{
+    clear: both;
+    height: 100%;
+    overflow: scroll;
+    padding: 16px 5%;
+}
+
+.section-profile{
+    display: flex;
+    align-items: center;
+}
+.section-profile .profile-img{
+    border-radius: 100%;
+    height: 36px;
+    width: 36px;
+}
+.section-profile .profile-heading{
+    font-size: 18px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+
+.section-schedule{
+}
+.schedule-header{
+    display: flex;
+    margin: 24px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+.schedule-header .schedule-header-title {
+    margin: 0;
+}
+.schedule-header .schedule-header-btn {
+    color: #E78F00;
+    padding: 5px 14px;
+    font-weight: normal;
+    border-radius: 13px;
+    border: 1px solid #FF9D00;
+    background-color: #fffaf1;
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.04);
+}
+.schedule-card{
+    display: flex;
+    margin: 20px 0;
+    min-height: 64px;
+    color: initial;
+    text-decoration: none;
+}
+.schedule-card-info{
+    flex: 2;
+    padding: 16px;
+    border-radius: 6px 0 0 6px;
+}
+.schedule-card-action{
+    flex: 1;
+    padding: 16px;
+    color: #FFFFFF;
+    font-weight: 400;
+    border-radius: 0 6px 6px 0;
+    text-align: center;
+}
+.schedule-action-content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.schedule-amount-old{
+    font-weight: 200;
+}
+.schedule-card-green .schedule-card-info{
+    background-color: #e0f9ec;
+}
+.schedule-card-green .schedule-card-action{
+    background-color: #00C267;
+}
+.schedule-card-orange .schedule-card-info{
+    background-color: #F9F5E1;
+}
+.schedule-card-orange .schedule-card-action{
+    background-color: #FFBE56;
+}
+
+
+.section-getting-started{
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #E4F5Fd;
+}
+.section-getting-started .getting-started-title{
+    margin-bottom: 5px;
+}
+.section-getting-started .getting-started-steps{
+    display: flex;
+}
+.section-getting-started .getting-started-step{
+    padding: 16px;
+    font-weight: normal;
+}
+.section-getting-started .icon-badge{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+}
+.section-getting-started .getting-started-purple .icon-badge{
+    background-color: rgba(190,164,255,0.7);
+}
+.section-getting-started .getting-started-orange .icon-badge{
+    background-color: rgba(255,146,101,0.7);
+}
+.section-getting-started .getting-started-action {
+    margin-top: 16px;
+    display: inline-block;
+}
+.section-getting-started .getting-started-orange .getting-started-action{
+    color: #FF682A;
+}
+.section-getting-started .getting-started-purple .getting-started-action{
+    color: #8A5CFF;
+}
+.section-getting-started .getting-started-action .getting-started-action-text{
+    text-decoration: underline;
+}
+
+
+.section-reminder{
+    margin-bottom: 100px;
+}
+.reminder-row{
+    display: flex;
+    align-items: center;
+    margin: 16px 0;
+}
+.reminder-heading{
+    font-weight: 300;
+    color: #00C267;
+}
+.reminder-time {
+    flex: 1;
+}
+.reminder-card{
+    flex: 3;
+    padding: 13px 16px;
+    border-radius: 6px;
+}
+.reminder-card-a{
+    background-color: #E4F5Fd;
+}
+.reminder-card-b{
+    background-color: #F1F0FD;
+}
+
+.app-footer-nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(244,244,244,0.75);
+    height: 74px;
+}
+.app-footer-nav .footer-menu{
+    padding: 12px 28px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.app-footer-nav .footer-menu a {
+    color: initial;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.modal{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    position: absolute;
+    margin: auto;
+    background-color:  rgba(0,0,0,0.9);
+}
+.modal-content{
+    margin: 130px auto 0;
+    height: 100%;
+    overflow: scroll;
+}
+.modal-header{
+    display: flex;
+    align-items: stretch;
+}
+.modal-header .modal-header-title{
+    flex: 2;
+    padding: 30px;
+    font-size: 26px;
+    border-radius: 20px 0 0 0;
+    background-color: #F9F5E1;;
+}
+.modal-header .modal-header-action{
+    flex: 1;
+    padding: 24px;
+    border-radius: 0 20px 0 0;
+    background-color: #FFBE56;
+}
+.modal-close{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modal-body{
+    height: 100%;
+    background-color: #FFFFFF;
+    padding: 30px;
+}
+.modal-body.no-padding{
+    padding: 0;
+}
+.modal-body .meal-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.modal-body .meal-item .meal-info{
+    font-size: 18px;
+    margin-left: 20px;
+}
+.modal-body .meal-item .meal-info span{
+    color: #6C6C6C;
+    font-size: 14px;
+}
+.modal#dishModal{
+    z-index: 1000;
+}
+.modal#dishModal .modal-content{
+    margin: 0;
+    display: flex;
+}
+.dish-wrapper{
+    margin: auto;
+    height: 400px;
+    width: 100%;
+}
+.dish-wrapper img{
+    height: 100%;
+    width: 100%;
+}
