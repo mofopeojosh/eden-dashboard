@@ -132,19 +132,25 @@ function handleDishModal(action) {
     var offsetHeight = dishButton.offsetHeight;
     var offsetWidth = dishButton.offsetWidth;
 
-    var dishModalImage = document.querySelector('#dishModalContent .dish-wrapper');
-    var dishModalImageStart = {
+    var dishModalContent = document.querySelector('#dishModalContent .dish-wrapper');
+    var dishModalContentStart = {
         height: offsetHeight + 'px',
         width: offsetWidth + 'px',
         marginTop: offsetTop + 'px',
         marginLeft: '30px',
-        borderRadius: '15px',
     };
-    var dishModalImageEnd = {
+    var dishModalContentEnd = {
         height: '100%',
         width: '100%',
         marginTop: 0 + 'px',
         marginLeft: '0px',
+    };
+
+    var dishModalImage = document.querySelector('#dishModalContent img');
+    var dishModalImageStart = {
+        borderRadius: '15px'
+    };
+    var dishModalImageEnd = {
         borderRadius: '0px'
     };
 
@@ -167,6 +173,11 @@ function handleDishModal(action) {
             dishModalImageStart,
             dishModalImageEnd
         ], timingOptions);
+
+        dishModalContent.animate([
+            dishModalContentStart,
+            dishModalContentEnd
+        ], timingOptions);
     }
 
     function closeDishModal() {
@@ -179,6 +190,11 @@ function handleDishModal(action) {
         dishModalImage.animate([
             dishModalImageEnd,
             dishModalImageStart,
+        ], timingOptions);
+
+        dishModalContent.animate([
+            dishModalContentEnd,
+            dishModalContentStart,
         ], timingOptions);
 
         setTimeout(function() {
