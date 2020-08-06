@@ -40,7 +40,7 @@ function handleMealModal(action) {
         height: offsetHeight + 'px',
         width: offsetWidth + 'px',
         marginTop: offsetTop + 'px',
-        opacity: 0,
+        opacity: 0.5,
     };
     var mealModalContentEnd = {
         height: '100%',
@@ -138,12 +138,14 @@ function handleDishModal(action) {
         width: offsetWidth + 'px',
         marginTop: offsetTop + 'px',
         marginLeft: '30px',
+        opacity: 0.5,
     };
     var dishModalContentEnd = {
         height: '100%',
         width: '100%',
         marginTop: 0 + 'px',
         marginLeft: '0px',
+        opacity: 1,
     };
 
     var dishModalImage = document.querySelector('#dishModalContent img');
