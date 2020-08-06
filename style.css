@@ -62,7 +62,6 @@ button:active, button:focus{
     }
 
     .app-body {
-        border: 1px solid #F9F9F9;
         padding-top: 24px;
     }
 }
@@ -257,18 +256,24 @@ button:active, button:focus{
     height: 100%;
     display: none;
     position: absolute;
-    margin: auto;
+    overflow: hidden;
     background-color:  rgba(0,0,0,0.9);
-    border: 1px solid #F9F9F9;
+}
+@media (min-width: 800px) {
+    .modal{
+        border-left: 1px solid #F9F9F9;
+        border-right: 1px solid #F9F9F9;
+    }
 }
 .modal-content{
     margin: 130px auto 0;
     height: 100%;
-    overflow: scroll;
+    overflow: hidden;
 }
 .modal-header{
     display: flex;
     align-items: stretch;
+    height: 80px;
 }
 .modal-header .modal-header-title{
     flex: 2;
@@ -291,7 +296,8 @@ button:active, button:focus{
     align-items: center;
 }
 .modal-body{
-    height: calc(100% - 130px);
+    height: calc(100% - 130px - 80px);
+    overflow: scroll;
     background-color: #FFFFFF;
     padding: 30px 30px 16px;
 }
