@@ -1,54 +1,56 @@
-let mealModalOpener = document.querySelector('#mealModalOpener');
-mealModalOpener.onclick = () => handleMealModal('open');
+// Global variables
+var timingOptions = {
+    easing: 'ease-in-out',
+    duration: 700,
+};
 
-let mealModalCloser = document.querySelector('#mealModalCloser');
-mealModalCloser.onclick = () => handleMealModal('close');
+var modalStart = {
+    background: 'transparent',
+};
+var modalEnd = {
+    background: 'rgba(0,0,0,0.9)',
+};
 
-let dishModalOpener = document.querySelector('#dishModalOpener');
-dishModalOpener.onclick = () => handleDishModal('open');
+// Add Event listeners
+var mealModalOpener = document.querySelector('#mealModalOpener');
+mealModalOpener.onclick = function() { handleMealModal('open') };
 
-let dishModal = document.querySelector('#dishModal');
-dishModal.onclick = (e) => {
+var mealModalCloser = document.querySelector('#mealModalCloser');
+mealModalCloser.onclick = function() { handleMealModal('close') };
+
+var dishModalOpener = document.querySelector('#dishModalOpener');
+dishModalOpener.onclick = function() { handleDishModal('open') };
+
+var dishModal = document.querySelector('#dishModal');
+dishModal.onclick = function(e) {
     if(e.target !== document.querySelector('#dishModal img')){
         handleDishModal('close');
     }
 };
 
-let timingOptions = {
-    easing: 'ease-in-out',
-    duration: 700,
-};
-
-let modalStart = {
-    background: 'transparent',
-};
-let modalEnd = {
-    background: 'rgba(0,0,0,0.9)',
-};
-
 function handleMealModal(action) {
-    let btn = document.querySelector('#mealModalOpener');
-    let offsetTop = btn.offsetTop;
-    let offsetHeight = btn.offsetHeight;
-    let offsetWidth = btn.offsetWidth;
-    let mealModal = document.querySelector('#mealModal');
+    var btn = document.querySelector('#mealModalOpener');
+    var offsetTop = btn.offsetTop;
+    var offsetHeight = btn.offsetHeight;
+    var offsetWidth = btn.offsetWidth;
+    var mealModal = document.querySelector('#mealModal');
 
-    let mealModalContent = document.querySelector('#mealModalContent');
-    let mealModalContentStart = {
+    var mealModalContent = document.querySelector('#mealModalContent');
+    var mealModalContentStart = {
         height: offsetHeight + 'px',
         width: offsetWidth + 'px',
         marginTop: offsetTop + 'px',
         opacity: 0,
     };
-    let mealModalContentEnd = {
+    var mealModalContentEnd = {
         height: '100%',
         width: '100%',
         marginTop: 130 + 'px',
         opacity: 1,
     };
 
-    let mealItems = document.querySelectorAll('.meal-item');
-    let mealItemsEnd = {
+    var mealItems = document.querySelectorAll('.meal-item');
+    var mealItemsEnd = {
         marginTop: '0px',
         marginLeft: '0px',
     };
@@ -74,9 +76,9 @@ function handleMealModal(action) {
         ], timingOptions);
 
         mealItems.forEach(mealItem => {
-            let firstMealItemOffset = mealItems[0].offsetTop;
-            let offsetTop = mealItem.offsetTop;
-            let mealItemsStart = {
+            var firstMealItemOffset = mealItems[0].offsetTop;
+            var offsetTop = mealItem.offsetTop;
+            var mealItemsStart = {
                 marginTop: '-' + Math.abs(offsetTop - firstMealItemOffset) + 'px',
                 marginLeft: '-' + 20 + 'px',
             };
@@ -89,7 +91,7 @@ function handleMealModal(action) {
     }
 
     function closeMealModal() {
-        let mealModal = document.querySelector('#mealModal');
+        var mealModal = document.querySelector('#mealModal');
 
         mealModal.animate([
             modalEnd,
@@ -101,11 +103,11 @@ function handleMealModal(action) {
             mealModalContentStart,
         ], timingOptions);
 
-        let offsetDiff = 0;
-        mealItems.forEach(mealItem => {
-            let firstMealItemOffset = mealItems[0].offsetTop;
+        var offsetDiff = 0;
+        mealItems.forEach(function(mealItem) {
+            var firstMealItemOffset = mealItems[0].offsetTop;
 
-            let mealItemsStart = {
+            var mealItemsStart = {
                 marginTop: '-' + Math.abs((mealItem.offsetTop - firstMealItemOffset) - offsetDiff) + 'px',
                 marginLeft: '-' + 20 + 'px',
             };
@@ -117,7 +119,7 @@ function handleMealModal(action) {
             ], timingOptions);
         });
 
-        setTimeout(() => {
+        setTimeout(function() {
             mealModal.style.display = 'none';
         }, 700);
     }
@@ -125,22 +127,20 @@ function handleMealModal(action) {
 
 function handleDishModal(action) {
 
-    let dishButton = document.querySelector('#dishModalOpener');
-    let offsetTop = dishButton.getBoundingClientRect().top;
-    let offsetHeight = dishButton.offsetHeight;
-    let offsetWidth = dishButton.offsetWidth;
+    var dishButton = document.querySelector('#dishModalOpener');
+    var offsetTop = dishButton.getBoundingClientRect().top;
+    var offsetHeight = dishButton.offsetHeight;
+    var offsetWidth = dishButton.offsetWidth;
 
-    let dishModalImage = document.querySelector('#dishModalContent img');
-    let dishModalImageStart = {
-        opacity: 0.2,
+    var dishModalImage = document.querySelector('#dishModalContent .dish-wrapper');
+    var dishModalImageStart = {
         height: offsetHeight + 'px',
         width: offsetWidth + 'px',
-        marginTop: (offsetTop - 100) + 'px',
+        marginTop: (offsetTop) + 'px',
         marginLeft: '30px',
-        borderRadius: '20px',
+        borderRadius: '15px',
     };
-    let dishModalImageEnd = {
-        opacity: 1,
+    var dishModalImageEnd = {
         height: '100%',
         width: '100%',
         marginTop: 0 + 'px',
@@ -181,7 +181,7 @@ function handleDishModal(action) {
             dishModalImageStart,
         ], timingOptions);
 
-        setTimeout(() => {
+        setTimeout(function() {
             dishModal.style.display = 'none';
         }, 700);
     }
