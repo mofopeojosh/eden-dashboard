@@ -299,7 +299,7 @@ button:active, button:focus{
     height: calc(100% - 130px - 80px);
     overflow: scroll;
     background-color: #FFFFFF;
-    padding: 30px 30px 16px;
+    padding: 30px;
 }
 .modal-body.no-padding{
     padding: 0;
