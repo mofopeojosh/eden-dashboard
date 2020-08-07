@@ -46,7 +46,7 @@ button:active, button:focus{
     padding: 16px 5% 75px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     .app-header {
         height: 70px;
         display: flex;
@@ -259,7 +259,7 @@ button:active, button:focus{
     overflow: hidden;
     background-color:  rgba(0,0,0,0.9);
 }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     .modal{
         border-left: 1px solid #F9F9F9;
         border-right: 1px solid #F9F9F9;
