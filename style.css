@@ -41,12 +41,12 @@ button:active, button:focus{
     position: relative;
 }
 .app-body{
-    height: calc(100% - 75px);
+    height: calc(100% - 75px - 16px);
     overflow: scroll;
-    padding: 16px 5% 75px;
+    padding: 16px 5% 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 470px) {
     .app-header {
         height: 70px;
         display: flex;
@@ -62,6 +62,7 @@ button:active, button:focus{
     }
 
     .app-body {
+        height: calc(100% - 75px - 24px);
         padding-top: 24px;
     }
 }
@@ -94,11 +95,12 @@ button:active, button:focus{
 }
 .schedule-header .schedule-header-btn {
     color: #E78F00;
+    font-size: 12px;
     padding: 5px 14px;
     font-weight: normal;
     border-radius: 13px;
-    border: 1px solid #FF9D00;
-    background-color: #fffaf1;
+    border: 1px solid #FE9B00;
+    background-color: #F8FAED;
     box-shadow: 0 16px 32px 0 rgba(0,0,0,0.04);
 }
 .schedule-card{
@@ -259,12 +261,6 @@ button:active, button:focus{
     overflow: hidden;
     background-color:  rgba(0,0,0,0.9);
 }
-@media (min-width: 768px) {
-    .modal{
-        border-left: 1px solid #F9F9F9;
-        border-right: 1px solid #F9F9F9;
-    }
-}
 .modal-content{
     margin: 130px auto 0;
     height: 100%;
@@ -304,6 +300,7 @@ button:active, button:focus{
     overflow: scroll;
     background-color: #FFFFFF;
     padding: 30px;
+    width: 100%;
 }
 .modal-body.no-padding{
     padding: 0;
