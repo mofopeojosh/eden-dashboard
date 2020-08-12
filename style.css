@@ -67,6 +67,8 @@ button:active, button:focus{
         padding-top: 24px;
     }
 }
+
+
 /****** PROFILE SECTION ******/
 .section-profile{
     display: flex;
@@ -265,6 +267,7 @@ button:active, button:focus{
 .modal-content{
     margin: 130px auto 0;
     height: 100%;
+    width: 100%;
     overflow: hidden;
 }
 .modal-header{
@@ -296,14 +299,16 @@ button:active, button:focus{
     align-items: center;
 }
 .modal-body{
-    /* full height - modal top margin - modal header height - modal body padding bottom */
-    height: calc(100% - 130px - 80px - 30px);
+    /* full height - modal top margin - modal header height */
+    height: calc(100% - 130px - 80px);
     overflow: scroll;
     background-color: #FFFFFF;
-    padding: 30px;
     width: 100%;
 }
-.modal-body.no-padding{
+.modal-body .modal-body-content{
+    padding: 30px ;
+}
+.modal-body .modal-body-content.no-padding{
     padding: 0;
 }
 .modal-body .meal-item {

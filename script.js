@@ -128,7 +128,7 @@ function handleMealModal(action) {
 function handleDishModal(action) {
 
     var dishButton = document.querySelector('#dishModalOpener');
-    var offsetTop = dishButton.getBoundingClientRect().top;
+    var offsetTop = dishButton.offsetTop;
     var offsetHeight = dishButton.offsetHeight;
     var offsetWidth = dishButton.offsetWidth;
 
