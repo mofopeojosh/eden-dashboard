@@ -41,9 +41,11 @@ button:active, button:focus{
     position: relative;
 }
 .app-body{
-    height: calc(100% - 75px - 16px);
+    height: calc(100% - 75px);
     overflow: scroll;
-    padding: 16px 5% 0;
+}
+.app-body-content{
+    padding: 16px 5% 0px;
 }
 
 @media (min-width: 470px) {
@@ -61,8 +63,7 @@ button:active, button:focus{
         max-width: 400px;
     }
 
-    .app-body {
-        height: calc(100% - 75px - 24px);
+    .app-body-content {
         padding-top: 24px;
     }
 }
