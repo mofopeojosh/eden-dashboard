@@ -45,7 +45,7 @@ button:active, button:focus{
     overflow: scroll;
 }
 .app-body-content{
-    padding: 16px 5% 0px;
+    padding: 16px 5%;
 }
 
 @media (min-width: 470px) {
